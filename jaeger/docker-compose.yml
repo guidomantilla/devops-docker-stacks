@@ -20,8 +20,8 @@ services:
       - COLLECTOR_ZIPKIN_HOST_PORT=9412
     
 volumes:
-  jaeger-data:
-    name: jaeger-data
+  jaeger-server-data:
+    name: jaeger-server-data
 
 networks:
   jaeger-network:
