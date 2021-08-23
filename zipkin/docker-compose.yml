@@ -11,8 +11,8 @@ services:
       - zipkin-network
     
 volumes:
-  zipkin_data:
-    name: zipkin_data
+  zipkin-data:
+    name: zipkin-data
 
 networks:
   zipkin-network:
