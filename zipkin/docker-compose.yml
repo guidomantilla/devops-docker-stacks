@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  zipkin-server:
+    image: openzipkin/zipkin
+    container_name: zipkin-server
+    restart: always
+    ports:
+      - 9411:9411
+    networks:
+      - zipkin-network
+    
+volumes:
+  zipkin_data:
+    name: zipkin_data
+
+networks:
+  zipkin-network:
+    name: zipkin-network
+    driver: bridge
