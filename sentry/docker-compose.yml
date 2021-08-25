@@ -16,8 +16,10 @@ services:
     container_name: sentry-postgres
     hostname: sentry-postgres
     restart: always
-    env_file:
-      - .env
+    environment:
+      POSTGRES_USER: {$SENTRY_DB_USER}
+      POSTGRES_PASSWORD: {$SENTRY_DB_PASSWORD}
+      POSTGRES_DB: {$SENTRY_DB_NAME}
     networks:
       - sentry-network
     volumes:
