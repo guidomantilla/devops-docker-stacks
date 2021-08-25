@@ -17,9 +17,9 @@ services:
     hostname: sentry-postgres
     restart: always
     environment:
-      POSTGRES_USER: {$SENTRY_DB_USER}
-      POSTGRES_PASSWORD: {$SENTRY_DB_PASSWORD}
-      POSTGRES_DB: {$SENTRY_DB_NAME}
+      POSTGRES_USER: sentry
+      POSTGRES_PASSWORD: 89PsZXyRStOT2
+      POSTGRES_DB: sentry
     networks:
       - sentry-network
     volumes:
